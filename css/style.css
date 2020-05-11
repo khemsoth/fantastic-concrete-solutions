@@ -24,7 +24,13 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+html {
+  height: 100%;
 }
 ol, ul {
 	list-style: none;
@@ -42,12 +48,25 @@ table {
 	border-spacing: 0;
 }
 
+.container-fluid {
+  padding: 0;
+  min-height: 100%;
+  height: 100%;
+  flex: 1 0 auto;
+}
+
 .navbar {
   background-color: #848484;
+  height: 10vh;
+  font-size: 1.5rem;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
 }
 
 .content {
-  margin-top: 5rem;
+  margin-top: 6rem;
 }
 
 .contact-form {
@@ -60,4 +79,21 @@ table {
   display: inline-block;
   margin-right: 1rem;
   color: rgba(255, 255, 255, .8);
+  font-size: 1.3rem;
+}
+
+.footer {
+  background-color: #848484;
+  height: 7rem;
+  width: 100%;
+  padding: 1rem;
+  color: rgba(255, 255, 255, .8);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-shrink: 0;
+}
+
+.footer-name {
+  font-size: 1.8rem;
 }
