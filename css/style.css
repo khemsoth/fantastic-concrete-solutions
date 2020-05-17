@@ -154,3 +154,11 @@ hr {
   max-height: 20%;
   max-width: 20%;
 }
+
+.modal-lg {
+  overflow: none;
+}
+
+.modal {
+  max-height: 80vh;
+}
