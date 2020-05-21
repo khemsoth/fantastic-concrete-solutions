@@ -2,7 +2,10 @@ const express = require('express');
 const app = express();
 const router = express.Router();
 const path = require('path');
-const nodemailer = require('nodemailer')
+const nodemailer = require('nodemailer');
+const hat = require('hat');
+require('dotenv').config();
+
 
 // GET ROUTES
 
@@ -21,24 +24,22 @@ router.get('/gallery', function(req, res) {
 // POST ROUTES
 
 router.post('/contact', function(req, res) {
-  const smtpTrans = nodemailer.createTransport({
+  const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com', 
     port: 465, 
     secure: true,
     auth: {
-      user: 'kevhemsoth@gmail.com',
-      pass: 'sullivan1228'
+      user: process.env.GMAIL_USER,
+      pass: process.env.SECRET
     }
   })
   const mailOpts = {
-    from: 'Your sender info',
-    to: 'kevhemsoth@gmail.com',
+    to: process.env.GMAIL_USER,
     subject: 'New message from Fantastic Concrete site contact form', 
-    text: `From: ${req.body.name} (${req.body.phone}) (${req.body.email}) 
-    message: 
-      ${req.body.message}`
+    text: `${req.body.name} (${req.body.email}, ${req.body.phone}) says: \n
+          ${req.body.message}` 
   }
-  smtpTrans.sendMail(mailOpts, function(err, res) {
+  transporter.sendMail(mailOpts, function(err, res) {
     if(err) {
       console.log(err);
     } else {
