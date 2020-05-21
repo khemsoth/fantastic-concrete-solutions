@@ -3,7 +3,6 @@ const app = express();
 const router = express.Router();
 const path = require('path');
 const nodemailer = require('nodemailer');
-const hat = require('hat');
 require('dotenv').config();
 
 
