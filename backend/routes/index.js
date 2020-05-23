@@ -20,6 +20,14 @@ router.get('/gallery', function(req, res) {
   res.sendFile(path.join(__dirname, '../../', 'gallery.html'));
 });
 
+router.get('/services', function(req, res) {
+  res.sendFile(path.join(__dirname, '../../', 'services.html'));
+});
+
+router.get('/about', function(req, res) {
+  res.sendFile(path.join(__dirname, '../../', 'about.html'));
+});
+
 // POST ROUTES
 
 router.post('/contact', function(req, res) {

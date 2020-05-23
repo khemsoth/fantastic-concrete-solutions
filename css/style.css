@@ -161,4 +161,14 @@ hr {
 
 .modal {
   max-height: 80vh;
+  overflow: visible;
+}
+
+.modal-body {
+  overflow: visible;
+  height: 100vh;
+}
+
+.modal-img {
+  height: 70vh;
 }
