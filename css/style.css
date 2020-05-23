@@ -86,11 +86,20 @@ table {
   height: 60vh;
 }
 
+.contact-header {
+  margin-top: 15vh;
+}
+
+.contact-headline {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: #46B477;
+}
+
 .contact-form {
   background-color: rgba(70, 130, 180, .3);
   padding: 2rem;
   border-radius: 2rem;
-  margin-top: 10rem;
 }
 
 .icons {
@@ -111,6 +120,11 @@ hr {
   width: 100%;
   color: #333;
   background-color: #333;
+}
+
+.summary {
+  margin: 2rem 0;
+  font-size: 1.3rem;
 }
 
 .summary-text {
