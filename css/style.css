@@ -204,6 +204,80 @@ hr {
   box-shadow: .5rem .5rem #bbb;
 }
 
+.vl {
+
+}
+
+.services-list {
+  margin: 0 auto;
+  text-align: center;
+  display: grid;
+  grid-template-areas: 
+  'card1 card2'
+  'card3 card4'
+  'card5 card6'
+  'card7 card8'
+  ;
+  justify-items: center;
+}
+
+.card {
+  margin: 2rem;
+  border: 1px #848484 solid;
+  border-radius: 1rem;
+}
+
+.card1 {
+  grid-area: card1;
+}
+
+.card2 {
+  grid-area: card2;
+}
+
+.card3 {
+  grid-area: card3;
+}
+
+.card4 {
+  grid-area: card4;
+}
+
+.card5 {
+  grid-area: card5;
+}
+
+.card6 {
+  grid-area: card6;
+}
+
+.card7 {
+  grid-area: card7;
+}
+
+.card8 {
+  grid-area: card8;
+}
+
+.card-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.card-left {
+  box-shadow: -.5rem .5rem .7rem #333;
+}
+
+.card-right {
+  box-shadow: .5rem .5rem .7rem #333;
+}
+
+.card-line {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
 #img1 {
   grid-area: img1
 }
