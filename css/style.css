@@ -225,6 +225,7 @@ hr {
   margin: 2rem;
   border: 1px #848484 solid;
   border-radius: 1rem;
+  width: 18rem;
 }
 
 .card1 {
@@ -350,11 +351,33 @@ hr {
 
 /* SCREEN BREAKPOINTS */
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 991px) {
   .navbar {
     display: flex; 
     flex-direction: row;
     justify-content: space-between;
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    top: 6rem;
+    background-color: #ddd;
+    flex-basis: 0;
+    flex-grow: 0;
+    border-radius: 5px;
+    padding: 1rem;
+  }
+
+  .navbar-dark .navbar-nav .nav-link {
+    color: #333;
+  }
+
+  .navbar-dark .navbar-nav .active > .nav-link{
+    color: #666;
+  }
+
+  .navbar-nav {
+    width: 20vw;
   }
 
   .collapse {
@@ -380,16 +403,126 @@ hr {
   }
 }
 
-@media only screen and (max-width: 550px) {
+@media only screen and (max-width: 750px) {
+
+  .services-list {
+    margin: 0 auto;
+  }
   
+  .footer {
+    display: grid;
+    grid-template-areas: 
+    'name hours contact'
+    'address hours contact'
+    ;
+  }
+
+  .footer-name {
+    grid-area: name;
+  }
+
+  .footer-address {
+    grid-area: address;
+  }
+
+  .footer-hours {
+    grid-area: hours;
+  }
+
+  .footer-contact {
+    grid-area: contact;
+  }
+
 }
 
-@media only screen and (max-width: 900px) {
-  
+@media only screen and (max-width: 650px) {
+
+  .navbar {
+    display: grid;
+    grid-template-areas: 
+    'nav name'
+    'nav contact'
+    ;
+  }
+
+  .navbar-brand {
+    grid-area: name;
+    position: static;
+    right: 0;
+    justify-content: end;
+    margin: 0;
+  }
+
+  .navbar-toggler {
+    grid-area: nav;
+  }
+
+  .icon-cont {
+    grid-area: contact;
+    justify-self: end;
+  }
+
+  .services-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+  }
+
+  .card-left, .card-right {
+    box-shadow: 0 .5rem .7rem #333;
+  }
+
+  .footer-address {
+    display: none;
+  }
+
+  .footer {
+    display: grid;
+    grid-template-areas: 
+    'name hours'
+    'contact hours'
+    ;
+  }
+
+  .footer-name {
+    grid-area: name;
+  }
+
+  .footer-hours {
+    grid-area: hours;
+  }
+
+  .footer-contact {
+    grid-area: contact;
+  }
 }
 
-@media only screen and (max-width: 900px) {
-  
+@media only screen and (max-width: 450px) {
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+
+  .icons {
+    font-size: 1rem;
+  }
+
+  .banner-img {
+    height: 40vh;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 345px) {
+  .footer {
+    height: 9rem;
+  }
 }
 
 
