@@ -348,4 +348,48 @@ hr {
   width: 100%;
 }
 
+/* SCREEN BREAKPOINTS */
+
+@media only screen and (max-width: 900px) {
+  .navbar {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .collapse {
+    order: 1;
+  }
+
+  .navbar-brand {
+    position: relative;
+    right: -3.5rem;
+    order: 2;
+  }
+
+  .icon-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    order: 3;
+  }
+
+  .icons {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  
+}
+
+@media only screen and (max-width: 900px) {
+  
+}
+
+@media only screen and (max-width: 900px) {
+  
+}
+
 
