@@ -6,7 +6,7 @@ const PORT = 3000;
 
 require('dotenv').config();
 
-app.use(express.static('../'));
+app.use(express.static('./'));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(routes);

@@ -9,23 +9,23 @@ require('dotenv').config();
 // GET ROUTES
 
 router.get('/', function(req, res) {
-  res.sendFile(path.join(__dirname, '../../', 'index.html'));
+  res.sendFile(path.join(__dirname, '../', 'index.html'));
 });
 
 router.get('/contact', function(req, res) {
-  res.sendFile(path.join(__dirname, '../../', 'contact.html'));
+  res.sendFile(path.join(__dirname, '../', 'contact.html'));
 });
 
 router.get('/gallery', function(req, res) {
-  res.sendFile(path.join(__dirname, '../../', 'gallery.html'));
+  res.sendFile(path.join(__dirname, '../', 'gallery.html'));
 });
 
 router.get('/services', function(req, res) {
-  res.sendFile(path.join(__dirname, '../../', 'services.html'));
+  res.sendFile(path.join(__dirname, '../', 'services.html'));
 });
 
 router.get('/about', function(req, res) {
-  res.sendFile(path.join(__dirname, '../../', 'about.html'));
+  res.sendFile(path.join(__dirname, '../', 'about.html'));
 });
 
 // POST ROUTES
