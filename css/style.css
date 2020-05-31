@@ -24,6 +24,7 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
+  font-family: 'Playfair Display', serif;
   line-height: 1;
   height: 100%;
   display: flex;
@@ -570,9 +571,24 @@ hr {
 }
 
 @media only screen and (max-width: 345px) {
+  .navbar-collapse {
+    width: 8rem;
+  }
+
   .footer {
     height: 9rem;
   }
 }
 
+@media only screen and (max-width: 277px) {
+  .footer {
+    height: 10rem;
+  }
+}
+
+@media only screen and (max-height: 650px) {
+  .navbar {
+    height: 12vh;
+  }
+} 
 
