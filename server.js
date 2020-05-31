@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const bodyParser = require('body-parser');
 const path = require('path');
 const routes = require('./routes');
 const nodemailer = require('nodemailer');
@@ -8,8 +9,8 @@ const PORT = process.env.PORT || 3000;
 
 require('dotenv').config();
 
-app.use(express.static('./'));
-app.use(express.urlencoded({ extended: true }));
+app.use(express.static(__dirname));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(routes);
 
