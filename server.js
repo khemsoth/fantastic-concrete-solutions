@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const router = express.Router();
 const bodyParser = require('body-parser');
 const path = require('path');
 const routes = require('./routes');
@@ -13,6 +14,7 @@ app.use(express.static(__dirname));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(routes);
+app.use('/', router);
 
 app.post('/contact', function(req, res) {
   const transporter = nodemailer.createTransport({
@@ -21,7 +23,7 @@ app.post('/contact', function(req, res) {
     secure: true,
     auth: {
       user: process.env.GMAIL_USER,
-      pass: process.env.SECRET
+      pass: process.env.GMAIL_PASS
     }
   })
   const mailOpts = {
