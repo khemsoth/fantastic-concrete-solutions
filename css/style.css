@@ -580,9 +580,15 @@ hr {
   }
 }
 
-@media only screen and (max-width: 277px) {
+@media only screen and (max-width: 305px) {
   .footer {
-    height: 10rem;
+    padding-bottom: 10rem;
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  .footer {
+    padding-bottom: 11rem;
   }
 }
 
