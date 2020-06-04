@@ -628,6 +628,16 @@ hr {
       }
     }
 
+    @media screen and (max-width: 450px) {
+      .navbar {
+        height: 15vh;
+      }
+
+      .navbar-brand {
+        padding: 0;
+      }
+    }
+
     @media screen and (max-width: 432px) {
       .footer {
         padding-bottom: 8rem;
