@@ -572,8 +572,9 @@ hr {
 
 @media only screen and (max-width: 380px) {
   .footer {
-    padding-bottom: 8rem;
+    height: 11rem;
   }
+
 }
 
 @media only screen and (max-width: 345px) {
@@ -603,4 +604,52 @@ hr {
     height: 12vh;
   }
 } 
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+  and (min-resolution:.001dpcm) {
+
+    @media screen and (max-width: 1118px) {
+      .navbar {
+        height: 20vh;
+        padding-bottom: 1rem;
+      }
+    }
+    
+    @media screen and (min-width: 651px) {
+
+      .navbar-brand {
+        margin-right: 3rem;
+      }
+    }
+
+    @media screen and (min-width: 451px) {
+      .footer {
+        padding-bottom: 8rem;
+      }
+    }
+
+    @media screen and (max-width: 432px) {
+      .footer {
+        padding-bottom: 8rem;
+      }
+    }
+
+    @media screen and (max-width: 380px) {
+      .footer {
+        padding-bottom: 0;
+      }
+    }
+
+    @media screen and (max-width: 345px) {
+      .footer {
+        padding-bottom: 11rem;
+      }
+    }
+
+    @media screen and (max-width: 233px) {
+      .footer {
+        width: 100%;
+      }
+    }
+  }
 
